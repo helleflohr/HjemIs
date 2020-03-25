@@ -1,0 +1,956 @@
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+
+@font-face {
+    font-family: 'Bodoni MT Black';
+    src: url(bod_blar.ttf);
+}
+
+body {
+    background-image: url(../img/baggrund1.1.jpg);
+    font: 14px/18px Calibri, sans-serif;
+    color: #21292b;
+    overflow-x: hidden;
+}
+
+h1 {
+    font: 22px Calibri;
+    font-family: 'Bodoni MT Black';
+    text-align: center;
+}
+
+h2 {
+    font: 18px Calibri;
+    font-family: 'Bodoni MT Black';
+    text-align: center;
+}
+
+h3 {
+    font: 18px Calibri;
+    font-family: 'Bodoni MT Black';
+    text-align: center;
+}
+
+h4 {
+    font-weight: bold;
+}
+
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+#wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+p {
+    line-height: 2em;
+}
+
+section {
+    padding: 2% 0;
+}
+
+
+/* HEADER
+-----------------------------------------------------------------------------*/
+
+header {
+    width: 100%;
+    z-index: 3;
+}
+
+.nav-mobile ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #e3f4f8;
+    text-align: center;
+
+}
+
+.nav-mobile li a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: #21292b;
+    font-family: 'Bodoni MT Black';
+    font-size: 18px;
+}
+
+.nav-mobile li a:hover,
+.nav-mobile .menu-btn:hover {
+    background-color: #e3f4f8;
+    color: #1c6573;
+}
+
+.nav-mobile .logo img {
+    display: block;
+    float: left;
+    width: 75px;
+    height: 75px;
+    margin: 2% 0 0 3%;
+}
+
+/* menu */
+.nav-mobile .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.nav-mobile .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+}
+
+.nav-mobile .navicon {
+    background: #21292b;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.nav-mobile .navicon:before,
+.nav-mobile .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.nav-mobile .navicon:before {
+    top: 5px;
+}
+
+.nav-mobile .navicon:after {
+    top: -5px;
+}
+
+
+/* menu btn */
+
+.nav-mobile .menu-btn {
+    display: none;
+}
+
+.nav-mobile .menu-btn:checked ~ .menu {
+    max-height: 240px;
+}
+
+.nav-mobile .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+
+.nav-mobile .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.nav-mobile .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+
+.nav-mobile .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.nav-mobile .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+#nav-tablet {
+    display: none;
+}
+
+#nav-pc {
+    display: none;
+}
+
+/* HJEM/INDEX-----------------------------------------------------------------------------*/
+#tekst {
+    text-align: center;
+}
+
+#tekst p {
+    padding-top: 3%;
+    padding-bottom: 2%;
+}
+
+#tekst p {
+    line-height: 1em;
+}
+
+#link {
+    text-decoration: none;
+    color: #21292b;
+    font-weight: bold;
+}
+
+#link:hover {
+    transform: scale(1.1);
+    transition: all .2s ease-in-out;
+}
+
+/*SLIDESHOW__________________________________________________________________*/
+#slider {
+    overflow: hidden;
+    border: solid 1px lightgray;
+}
+
+
+#slider figure {
+    position: relative;
+    width: 700%;
+    margin: 0;
+    left: 0;
+    animation: 30s slider infinite;
+}
+
+#slider figure img {
+    width: 14.28%;
+    float: left;
+}
+
+@keyframes slider {
+    0% {
+        left: 0;
+    }
+
+    8.33% {
+        left: 0;
+    }
+
+    16.66% {
+        left: -100%;
+    }
+
+    24.99% {
+        left: -100%;
+    }
+
+
+    33.32% {
+        left: -200%;
+    }
+
+    41.65% {
+        left: -200%;
+    }
+
+    49.98% {
+        left: -300%;
+    }
+
+    58.31% {
+        left: -300%;
+    }
+
+    66.64% {
+        left: -400%;
+    }
+
+    74.97% {
+        left: -400%;
+    }
+
+    83.3% {
+        left: -500%;
+    }
+
+    91.63% {
+        left: -500%;
+    }
+
+    100% {
+        left: -600%;
+    }
+
+
+}
+
+#flex img {
+    border: solid 1px lightgray;
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 95%;
+}
+
+
+
+/* FOOTER
+-----------------------------------------------------------------------------*/
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 3%;
+}
+
+#footer1 {
+    margin: 0 auto;
+}
+
+#footer2 {
+    display: none;
+}
+
+#footer3 {
+    display: none;
+}
+
+#footer4 {
+    margin: 0 auto;
+}
+
+#footer4-img img {
+    padding: 0 10%;
+}
+
+.facebook:hover {
+    transform: scale(1.1);
+    transition: all .2s ease-in-out;
+}
+
+.insta:hover {
+    transform: scale(1.1);
+    transition: all .2s ease-in-out;
+}
+
+/*PICK'N'MIX__________________________________________________________________*/
+.kursiv {
+    font-style: italic;
+}
+
+.photo img {
+    width: 120px;
+}
+
+#text-mix {
+    text-align: center;
+}
+
+.cart {
+    text-align: right;
+    margin: 0 2% 3% 0;
+}
+
+#text-mix p {
+    padding: 1% 0;
+
+}
+
+.quantity {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 1%;
+}
+
+.quantity label,
+.quantity img {
+    padding: 0 3%;
+}
+
+.quantity img {
+    width: 25px;
+    height: 25px;
+    padding-top: 3%;
+}
+
+.quantityinput {
+    width: 2em;
+    padding: 0 2%;
+}
+
+
+.price {
+    font-weight: bold;
+    background: #F9AB33;
+    padding: 5px;
+    width: 75%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* FILTER__(Lavet ud fra: https://webdesign.tutsplus.com/tutorials/how-to-build-a-filtering-component-in-pure-css--cms-33111)_________________________________________*/
+.container {
+    margin: 0 auto;
+}
+
+input[type="radio"] {
+    position: absolute;
+    left: -9999px;
+}
+
+
+.filters {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.filters * {
+    display: inline-block;
+}
+
+.filters label {
+    padding: 0.5em 1em;
+    margin-bottom: 0.2em;
+    border-radius: 2em;
+    min-width: 50px;
+    line-height: normal;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+.filters label:hover {
+    background: #15444c;
+    color: #e3f4f8;
+}
+
+
+/* FILTREREDE ELEMENTER (POSTS)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.posts {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
+
+.posts .post {
+    width: 140px;
+    border: 1.3px solid #15444c;
+}
+
+.posts .post-title:hover {
+    text-decoration: underline;
+}
+
+
+.posts .post-categories {
+    margin-bottom: 0.75em;
+    font-size: 0.75em;
+}
+
+.posts .post-categories * {
+    display: inline-block;
+}
+
+.posts .post-categories li {
+    margin-bottom: 0.2em;
+}
+
+.posts .post-categories a {
+    padding: 0.2em 0.5em;
+    border-radius: 1em;
+    border: 1px solid #15444c;
+    color: #15444c;
+    line-height: normal;
+    transition: all 0.1s;
+}
+
+.posts .post-categories a:hover {
+    background: #15444c;
+    color: #e3f4f8;
+}
+
+
+/* REGLER FOR FILTRERING
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+[value="All"]:checked ~ .filters [for="All"],
+[value="Pindis"]:checked ~ .filters [for="Pindis"],
+[value="Borneis"]:checked ~ .filters [for="Borneis"],
+[value="Lemonadeis"]:checked ~ .filters [for="Lemonadeis"],
+[value="Vafler"]:checked ~ .filters [for="Vafler"],
+[value="Specialis"]:checked ~ .filters [for="Specialis"],
+[value="Flodeis"]:checked ~ .filters [for="Flodeis"] {
+    background: #15444c;
+    color: #e3f4f8;
+}
+
+[value="All"]:checked ~ .posts [data-category] {
+    display: block;
+}
+
+[value="Pindis"]:checked ~ .posts .post:not([data-category~="Pindis"]),
+[value="Borneis"]:checked ~ .posts .post:not([data-category~="Borneis"]),
+[value="Lemonadeis"]:checked ~ .posts .post:not([data-category~="Lemonadeis"]),
+[value="Vafler"]:checked ~ .posts .post:not([data-category~="Vafler"]),
+[value="Specialis"]:checked ~ .posts .post:not([data-category~="Specialis"]),
+[value="Flodeis"]:checked ~ .posts .post:not([data-category~="Flodeis"]) {
+    display: none;
+}
+
+
+/*IS SIDER__________________________________________________________________*/
+
+#text-ice {
+    text-align: center;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 3%;
+}
+
+#icecream {
+    text-align: center;
+}
+
+#icecream h1 {
+    padding: 2% 0
+}
+
+thead {
+    font-weight: bold;
+}
+
+table {
+    margin: 0 auto;
+    padding: 3%;
+}
+
+#tabel p {
+    text-align: center;
+}
+
+
+.blue {
+    background-color: #347c8a;
+}
+
+.white {
+    background-color: ghostwhite;
+}
+
+.gray {
+    background-color: lightgray;
+}
+
+.varer {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 3%;
+}
+
+.varer b {
+    font-weight: bolder;
+}
+
+/* VORES IS__________________________________________________________________*/
+#text-vores {
+    text-align: center;
+    padding-top: 3%;
+}
+
+#kampagne {
+    border: 1px solid #15444c;
+    padding-bottom: 0;
+    margin: 5% auto 0;
+}
+
+#kampagne img {
+    width: 100%;
+    border: 1px solid lightgray;
+}
+
+#kampagne h2 {
+    font-size: 28px;
+}
+
+/*HJEM-IS BILEN__________________________________________________________________*/
+#text-bil {
+    text-align: center;
+    align-content: center;
+    padding: 3%;
+}
+
+form {
+    text-align: right;
+}
+
+#form {
+    display: inline-block;
+}
+
+#form div {
+    padding: 1%;
+}
+
+#form input {
+    border: 1px solid #15444c;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding-left: 2%;
+}
+
+#bil {
+    text-align: center;
+}
+
+.map {
+    text-align: center;
+    padding-top: 5%;
+}
+
+.map iframe {
+    height: 100%;
+    width: 100%;
+    padding-top: 2%;
+}
+
+iframe {
+    width: 600px;
+    height: 450px;
+}
+
+.h2map {
+    text-align: center;
+}
+
+/*KASSE________________________________________________________________________________*/
+.grid-box {
+    margin: 10% 2%;
+    display: grid;
+    grid-template-columns: 50px 1fr 60px 65px 55px;
+}
+
+.grid-box div {
+    border-top: 1px solid lightgray;
+}
+
+
+.grid-box img {
+    height: 50px;
+}
+
+.grid-box a {
+    text-decoration: none;
+    color: #15444c;
+}
+
+.boxhead,
+.boxfooter {
+    font-weight: bolder;
+}
+
+.boxfooter {
+    background-color: #e3f4f8;
+    padding: 1em .5em;
+}
+
+.img {
+    text-align: center;
+}
+
+.text {
+    text-align: justify;
+}
+
+.btn {
+    text-align: right;
+    margin: 0 2%;
+}
+
+
+
+#btn {
+    background-color: #e3f4f8;
+}
+
+#box p {
+    text-align: center;
+}
+
+.boxinput {
+    width: 2.5em;
+    padding: 0 2%;
+}
+
+.title,
+.stk,
+.ialt,
+.stkpris {
+    padding: 1em 0;
+}
+
+.stkpris {
+    text-align: right;
+}
+
+/* MEDIAQUERIES
+-----------------------------------------------------------------------------*/
+@media only screen and (min-width:375px) {
+    .stkpris {
+        text-align: left;
+    }
+
+    .nav-mobile .logo img {
+        margin: 1% 0 0 3%;
+    }
+}
+
+@media only screen and (min-width:450px) {
+
+    .ice {
+        width: 140px;
+    }
+
+    .photo img {
+        width: 140px;
+    }
+
+    .nav-mobile .logo img {
+        margin: 1% 0 0 2%;
+    }
+
+}
+
+@media only screen and (min-width:500px) {
+    #flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #flex div {
+        width: 45%;
+        padding: 2.5%;
+
+    }
+
+    #tekst,
+    #text-vores,
+    #text-bil {
+        max-width: 620px;
+        margin: 0 auto;
+        padding-top: 3%;
+    }
+
+    #text-mix {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    #footer2 {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .posts {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+}
+
+@media only screen and (min-width:630px) {
+    .nav-mobile {
+        display: none;
+    }
+
+    #nav-tablet {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        color: #15444c;
+        text-align: center;
+    }
+
+    #nav-tablet ul {
+        width: 100%;
+    }
+
+    #nav-tablet a:hover {
+        color: #1c6573;
+    }
+
+    #nav-tablet li {
+        display: inline-block;
+        font-family: 'Bodoni MT Black';
+        font-size: 16px;
+        margin: 0 auto;
+        width: 114px;
+    }
+
+    #nav-tablet a {
+        color: #21292b;
+        text-decoration: none;
+        padding: 0 5%;
+    }
+
+    #nav-tablet li a {
+        padding: 2%;
+        margin: 0 auto;
+    }
+
+    #nav-tablet img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .map iframe {
+        height: 450px;
+        width: 600px;
+        padding: 3% 0;
+    }
+
+    .map {
+        width: 600px;
+        margin: 0 auto;
+    }
+
+    .grid-box {
+        max-width: 630px;
+        margin: 0 auto;
+    }
+
+    .btn {
+        margin: 0 auto;
+        max-width: 630px;
+        padding: 1em 0;
+    }
+
+}
+
+@media only screen and (min-width:650px) {
+    #slider {
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    #container {
+        width: 650px;
+    }
+
+    #flex-bil {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 3%;
+    }
+
+    #form,
+    #bil {
+        margin: 0 auto;
+        width: 48%;
+    }
+
+}
+
+@media only screen and (min-width:750px) {
+    #footer4-img {
+        display: none;
+    }
+
+    #footer3 {
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    .posts {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+@media only screen and (min-width:900px) {
+    #wrapper {
+        width: 900px;
+    }
+
+    #flex div {
+        width: 28%;
+    }
+
+    #nav-tablet {
+        display: none;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    .logo-pc {
+        background-image: url(../img/logo.png);
+        background-repeat: no-repeat;
+        background-size: 10em;
+        padding: 8%;
+        padding-bottom: 7.7%;
+        text-indent: -2000px;
+        margin: 0 auto -3%;
+    }
+
+    #logo-pc a {
+        padding: 7.7%;
+    }
+
+    #nav-pc {
+        display: flex;
+        align-items: center;
+        margin: 3% auto 0;
+    }
+
+
+    #nav-pc a {
+        margin: 0 auto;
+        width: 114px;
+        color: #21292b;
+        text-align: center;
+
+    }
+
+    #nav-pc a:hover {
+        color: #15444c;
+        transform: scale(1.2);
+        transition: all .2s ease-in-out;
+    }
+
+    .pc {
+        text-decoration: none;
+        margin: 0 auto;
+        font: 16px Calibri;
+        font-family: 'Bodoni MT Black';
+        vertical-align: middle;
+        justify-content: center;
+    }
+
+
+    #logo-pc:hover {
+        transform: scale(1.05);
+        transition: all .2s ease-in-out;
+    }
+
+    #icecream {
+        padding-top: 5%;
+    }
+
+    #flex-ice {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
